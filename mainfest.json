@@ -1,0 +1,10 @@
+{
+  "name": "Krishell DOP Web App",
+  "short_name": "Web App",
+  "description": "A collection of useful web applications",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait"
+}
