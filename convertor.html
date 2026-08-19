@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="small-container">
+<h2>Measurement Converter</h2>
+<input type="number" id="value" placeholder="Enter value">
+<select id="conversion">
+    <option value="mToKm">Meters → Kilometers</option>
+    <option value="kmToM">Kilometers → Meters</option>
+    <option value="cmToM">Centimeters → Meters</option>
+    <option value="mToCm">Meters → Centimeters</option>
+</select>
+<button onclick="convert()">Convert</button>
+<p id="result"></p>
+<a class="button back-button" href="index.html">← Back</a>
+</div>
+
+<script>
+function convert(){
+    let value = document.getElementById("value").value;
+    let type = document.getElementById("conversion").value;
+
+    if(value === ""){
+        alert("Please enter a value.");
+        return;
+    }
+
+    value = parseFloat(value);
+    let answer = "";
+
+    if(type === "mToKm") answer = (value/1000).toFixed(2) + " km";
+    else if(type === "kmToM") answer = (value*1000).toFixed(2) + " m";
+    else if(type === "cmToM") answer = (value/100).toFixed(2) + " m";
+    else answer = (value*100).toFixed(2) + " cm";
+
+    document.getElementById("result").innerHTML = answer;
+}
+</script>
+</body>
+</html>

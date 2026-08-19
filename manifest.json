@@ -1,0 +1,10 @@
+{
+  "name": "Krishell Website",
+  "short_name": "Krishell",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f4f4",
+  "theme_color": "#3498db",
+  "description": "My resume and web projects",
+  "icons": []
+}
